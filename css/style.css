@@ -1,0 +1,1086 @@
+@charset "UTF-8";
+/* == Font import == */
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* font-family: 'Shalimar'; */
+/* font-family: 'Lobster'; */
+/* font-family: 'Abril Fatface', cursive; */
+/* font-family: 'Libre Baskerville', serif; */
+#more {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Style */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  font-family: "Abril Fatface", cursive;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 10px 0;
+  background: #1D1C18;
+}
+
+.navbar.sticky .menu li a {
+  color: #CFCFCB;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: crimson;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 90px;
+  margin: auto;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo img {
+  width: 120px;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: crimson;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #CFCFCB;
+}
+
+/* menu btn style  */
+.menu-btn {
+  color: #CFCFCB;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.scrol-btn-up {
+  position: fixed;
+  height: 45px;
+  width: 40px;
+  background: #1D1C18;
+  right: 30px;
+  bottom: 70px;
+  text-align: center;
+  line-height: 45px;
+  color: #CFCFCB;
+  z-index: 9999;
+  font-size: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.scrol-btn-up.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scrol-btn-up a {
+  color: #CFCFCB;
+}
+
+#header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/f1165f02f93c700cb3210d78acb61550.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #CFCFCB;
+  font-family: "Abril Fatface", cursive;
+}
+
+.user-box {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.user-box1 {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.user-box1 img {
+  left: 50%;
+  border-radius: 50%;
+  width: 250px;
+  border: 2px solid #CFCFCB;
+  box-shadow: 10px 10px 54px -6px rgba(207, 207, 203, 0.75);
+}
+
+.container1 {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container1 .box {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container1 .box .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.container1 .box .title .block {
+  width: 50%;
+  height: inherit;
+  background: crimson;
+  position: absolute;
+  -webkit-animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.1, 0.92) forwards;
+          animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.1, 0.92) forwards;
+  display: flex;
+}
+.container1 .box .title h1 {
+  color: #CFCFCB;
+  font-weight: 900;
+  font-size: 30px;
+  -webkit-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  opacity: 0;
+  align-items: center;
+}
+.container1 .box .title h1 span {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: #ee1a32;
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  margin-left: 3px;
+  margin-top: -5px;
+  position: absolute;
+  right: -7px;
+}
+
+.console-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
+  height: 200px;
+  width: 600px;
+  display: block;
+  position: absolute;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.console-container {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 0.1em;
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+}
+
+.header .home-content .text-3 {
+  font-size: 30px;
+  margin: 5px 0;
+  letter-spacing: 0.1em;
+}
+
+.header .home-content .text-3 span {
+  color: crimson;
+  font-weight: 500;
+}
+
+.scroll-btn {
+  bottom: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #CFCFCB;
+  padding: 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.scroll-bar {
+  border: 2px solid #CFCFCB;
+  height: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.scroll-bar {
+  -webkit-animation: mover 1s infinite alternate;
+          animation: mover 1s infinite alternate;
+}
+
+/* section style  */
+section {
+  padding: 100px 0;
+}
+
+.about, .services, .skills {
+  font-family: "Libre Baskerville", serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Lobster";
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #1D1C18;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  font-size: 20px;
+  color: crimson;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  background: #CFCFCB;
+  transform: translateX(-50%);
+}
+
+/* about section style  */
+.about .title::after {
+  content: "Who i am ";
+  font-family: "Abril Fatface", cursive;
+}
+
+.about {
+  background: #CFCFCB;
+  color: #1D1C18;
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 10px 10px 54px -6px rgba(29, 28, 24, 0.75);
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right .text {
+  font-family: "Abril Fatface", cursive;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+
+.about .about-content .right .text span {
+  color: crimson;
+}
+
+.about .about-content .right p {
+  text-align: justify;
+}
+
+.about .about-content .right a {
+  display: inline-block;
+  background: crimson;
+  color: #CFCFCB;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 50px;
+  transition: all 1s ease;
+}
+
+.about .about-content .right a:hover {
+  border: 2px solid #1D1C18;
+  color: crimson;
+  background: none;
+}
+
+/* Services section style  */
+.services {
+  background: #585856;
+  color: #CFCFCB;
+  font-family: "Abril Fatface", cursive;
+}
+
+.services .serv-content .text {
+  text-transform: uppercase;
+  background: linear-gradient(70deg, #1D1C18, #CFCFCB, crimson);
+  letter-spacing: 3px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  -webkit-animation: shin 4s linear infinite;
+          animation: shin 4s linear infinite;
+  position: relative;
+}
+
+.services .max-width h2.title {
+  color: #1D1C18;
+}
+
+.services .title::before {
+  background: #CFCFCB;
+}
+
+.services .title::after {
+  content: "What i provide";
+  font-family: "Abril Fatface", cursive;
+  background: #585856;
+}
+
+.services .serv-content .card {
+  width: calc( 33% - 20px );
+  background: #CFCFCB;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 25px;
+  cursor: pointer;
+  border: 1px solid #CFCFCB;
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover {
+  background: #CFCFCB;
+}
+
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #1D1C18;
+  transition: color 0.7s ease;
+}
+
+.services .serv-content .card:hover i {
+  color: #1D1C18;
+}
+
+.services .serv-content .card .text {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 7px 0;
+  color: crimson;
+}
+
+.services .serv-content .card p {
+  color: #1D1C18;
+}
+
+/* Skills section style  */
+.skills .title::after {
+  content: "What i know";
+  font-family: "Abril Fatface", cursive;
+  background: 1D1C18;
+}
+
+.skills {
+  background: #CFCFCB;
+  color: #1D1C18;
+}
+
+.skills .skills-content .column {
+  width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .right .bars {
+  color: #1D1C18;
+  margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.skills .skills-content button {
+  display: inline-block;
+  background: crimson;
+  color: #CFCFCB;
+  font-size: 10px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 50px;
+  transition: all 1s ease;
+}
+
+.skills .skills-content button:hover {
+  color: crimson;
+  background: none;
+}
+
+.skills .skills-content .right .line {
+  height: 5px;
+  width: 100%;
+  background: crimson;
+  position: relative;
+}
+
+.skills .skills-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #1D1C18;
+}
+
+.skills-content .right .html::before {
+  width: 100%;
+}
+
+.skills-content .right .css::before {
+  width: 70%;
+}
+
+.skills-content .right .js::before {
+  width: 70%;
+}
+
+.skills-content .right .sql::before {
+  width: 60%;
+}
+
+.skills-content .right .react::before {
+  width: 40%;
+}
+
+.skills-content .right .mic::before {
+  width: 100%;
+}
+
+/* Contact section style  */
+.contact {
+  color: #CFCFCB;
+  background: #585856;
+}
+
+.contact .max-width h2.title {
+  color: #1D1C18;
+}
+
+.contact .title::before {
+  background: #CFCFCB;
+}
+
+.contact .title::after {
+  content: "Get in touch";
+  font-family: "Abril Fatface", cursive;
+  background: #585856;
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 200px);
+}
+
+.contact .contact-content .text {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #E8F0D6;
+  width: 15ch;
+  -webkit-animation: typing 5s steps(22), blink 0.1s step-end infinite alternate;
+          animation: typing 5s steps(22), blink 0.1s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.contact .contact-content .icons {
+  margin: 10px 0;
+}
+
+.contact .contact-content .row {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 20px;
+}
+
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: #1D1C18;
+}
+
+.contact .contact-content .info .head {
+  font-family: "Abril Fatface", cursive;
+  font-weight: 200;
+  font-size: 20px;
+  color: crimson;
+}
+
+.contact .contact-content .info .sub-title {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* footer section style  */
+footer {
+  font-size: 10px;
+  padding: 15px 15px;
+  display: flex;
+  background: #1D1C18;
+  color: #CFCFCB;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2em;
+}
+
+/* responsive media query style  */
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+
+  .contact .contact-content .text {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .contact .contact-content .text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active::before {
+    content: "";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: -100%;
+    background: #1D1C18;
+    text-align: center;
+    padding-top: 50px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navbar .menu.active {
+    top: 0%;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .header .home-content .text-2 {
+    font-size: 50px;
+  }
+
+  .header .home-content .text-3 {
+    font-size: 25px;
+  }
+
+  .max-width {
+    max-width: 800px;
+  }
+
+  .about .about-content .column {
+    width: 10%;
+  }
+
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .right {
+    flex: 100%;
+  }
+
+  .services .serv-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .about .about-content .right .text {
+    font-family: "Abril Fatface", cursive;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .skills .skills-content .column {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .contact .contact-content .text {
+    font-size: 18px;
+  }
+
+  .contact .contact-content .row i {
+    font-size: 18px;
+  }
+
+  .contact .contact-content .info .head {
+    font-size: 16px;
+  }
+
+  .contact .contact-content .info .sub-title {
+    font-size: 10px;
+  }
+
+  .console-container {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 30px;
+  }
+
+  .header .home-content .text-2 {
+    font-size: 30px;
+  }
+
+  .header .home-content .text-3 {
+    font-size: 18px;
+  }
+
+  .contact .contact-content .text {
+    font-size: 15px;
+  }
+
+  .contact .contact-content .row i {
+    font-size: 18px;
+  }
+
+  .contact .contact-content .info .head {
+    font-size: 16px;
+  }
+
+  .console-container {
+    font-size: 1em;
+    top: 75%;
+  }
+
+  .services .serv-content .card,
+.skills .skills-content .column,
+.contact .contact-content .column {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+@media (max-width: 690px) and (max-width: 500px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .header .home-content .text-2 {
+    font-size: 25px;
+  }
+
+  .header .home-content .text-3 {
+    font-size: 17px;
+  }
+
+  .contact .contact-content .text {
+    font-size: 15px;
+  }
+
+  .contact .contact-content .row i {
+    font-size: 18px;
+  }
+
+  .contact .contact-content .info .head {
+    font-size: 16px;
+  }
+
+  .console-container {
+    font-size: 0.5em;
+    top: 80%;
+  }
+}
+@media (max-width: 350px) {
+  .max-width {
+    padding: 0 70px;
+  }
+
+  .header .home-content .text-2 {
+    font-size: 15px;
+  }
+
+  .header .home-content .text-3 {
+    font-size: 12px;
+  }
+
+  .services .title::after {
+    font-size: 14px;
+  }
+
+  section .title {
+    font-size: 28px;
+  }
+
+  .skills .title::after {
+    font-size: 14px;
+  }
+
+  .about .about-content .right .text {
+    font-size: 18px;
+  }
+
+  .about .about-content .right .text p {
+    font-size: 12px;
+  }
+
+  .contact .title::after {
+    font-size: 14px;
+  }
+
+  .contact .contact-content .text {
+    font-size: 20px;
+  }
+
+  .contact .contact-content .row i {
+    font-size: 18px;
+  }
+
+  .contact .contact-content .info .head {
+    font-size: 15px;
+  }
+
+  .contact .contact-content .info .sub-title {
+    font-size: 10px;
+  }
+
+  .console-container {
+    font-size: 0.3em;
+  }
+}
+/* Animated */
+.animate__pulse {
+  -webkit-animation: mover1 4s infinite alternate;
+          animation: mover1 4s infinite alternate;
+}
+
+.animate__zoomIn {
+  -webkit-animation-timing-function: 4s infinity;
+          animation-timing-function: 4s infinity;
+}
+
+@-webkit-keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@-webkit-keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: crimson;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: crimson;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+    background: crimson;
+    border: 1px solid #CFCFCB;
+    bottom: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: crimson;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: crimson;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+    background: crimson;
+    border: 1px solid #CFCFCB;
+    bottom: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes shin {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+@keyframes shin {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}/*# sourceMappingURL=style.css.map */
